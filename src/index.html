@@ -1,0 +1,458 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snowball Jewelry Co.</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<style type="text/css">
+	*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.header-top-menu{
+  z-index:5;
+}
+html{
+	font: normal 16px sans-serif;
+	color: #555;
+}
+
+ul, nav{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	opacity:0.75;
+	color: #fff;
+}
+a:hover{
+	opacity:1;
+}
+a.btn{
+	border-radius: 4px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	/* background-color: #3f51b5; */ 
+	background-color: #766967;
+	opacity: 1;
+}
+
+  section{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+  }
+
+section:not(.hero):nth-child(even){
+	background-color: #f5f5f5;
+}
+
+.grid{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+hr{
+	width: 250px;
+	height: 3px;
+	background-color: #3f51b5;
+	border: 0;
+	margin-bottom: 50px;
+}
+
+section h3.title{
+	text-transform: capitalize;
+	font: bold 32px "Open Sans", sans-serif;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+section p{
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+@media (max-width:800px){
+	section{
+		padding: 50px 20px;
+	}
+}
+
+header{
+	position: absolute;
+	width: 100%;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:35px 100px 0;
+	animation: 1s fadein 0.5s forwards;
+	opacity: 0;
+	color: #fff;
+}
+@keyframes fadein{
+	100%{
+		opacity: 1;
+	}
+}
+
+header h2{
+	font-family: "Quicksand", sans-serif;
+}
+header nav{
+	display: flex;
+	margin-right: -15px;
+}
+header nav li{
+	margin: 0 15px;
+}
+
+@media (max-width: 800px){
+	header{
+		padding: 20px 50px;
+		flex-direction: column;
+		}
+	header h2{
+		margin-bottom: 15px;
+	}
+}
+
+.hero{
+	position:relative;
+	justify-content: center;
+	text-align: center;
+	min-height: 100vh;
+	width:100%;
+	color: #fff;
+}
+.hero .background-image{
+	position: absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	z-index: -1;
+	background-size: cover;
+	background-color: #80a3db;
+}
+.hero h1{
+	font: bold 60px "Open Sans", sans-serif;
+	margin-bottom: 15px;
+}
+.hero h3{
+	font: normal 28px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+}
+.hero a.btn{
+	padding: 20px 46px;
+}
+.hero-content-area{
+	opacity: 0;
+	margin-top: 100px;
+	animation: 1s slidefade 1s forwards;
+} 
+@keyframes slidefade{
+	100%{
+		margin-top: 0px;
+		opacity: 1;
+	}
+}
+@media (max-width: 800px){
+	.hero{
+		min-height: 600px;
+	}
+	.hero h1{
+		font-size: 48px;
+	}
+	.hero h3{
+		font-size: 24px;
+	}
+	.hero a.btn{
+		padding: 15px 40px;
+	}
+}
+
+
+.destination .grid li{
+	height: 500px;
+	padding: 10px;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+}
+.destination .grid li.small{
+	flex-basis: 30%;
+}
+.destination .grid li.large{
+	flex-basis: 70%;
+}
+
+.destination .grid li.medium{
+	flex-basis: 40%;
+}
+.destination .grid li.medium2{
+	flex-basis: 60%;
+}
+.destination .grid li.quarter{
+	flex-basis: 25%;
+}
+.destination .grid li.half{
+	flex-basis: 50%;
+}
+.destination .grid li.all{
+	flex-basis: 100%;
+}
+@media (max-width: 1100px){
+	.destination .grid li.small,
+	.destination .grid li.large{
+		flex-basis: 50%;
+	}
+}
+@media (max-width: 800px){
+	.destination .grid li.small,
+	.destination .grid li.large{
+		flex-basis: 100%;
+	}
+}
+
+.package .grid li{
+	padding: 50px;
+	flex-basis: 50%;
+	text-align: center;
+}
+.package .grid i{
+	color: #8c9eff;
+}
+.package .grid li h4{
+	font-size: 30px;
+	margin: 25px 0;
+}
+
+@media (max-width: 800px){
+	.package .grid li{
+		flex-basis: 100%;
+		padding: 20px;
+	}
+}
+
+.testimonials .quote{
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 40px 0 25px;
+}
+
+@media (max-width: 800px){
+	.testimonials .quote{
+		font-size: 18px;
+		margin: 15px 0;
+	}
+	.testimonials .author{
+		font-size: 14px;
+	}
+}
+
+.contact form{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 60%;
+}
+.contact form .btn{
+	padding: 18px 42px;
+}
+.contact form input{
+	padding: 15px;
+	margin-right: 15px ;
+	font-size:18px;
+	color: #555;
+	flex: 1;
+}
+
+@media (max-width: 1000px){
+	.contact form input{
+		flex-basis: 100%;
+		margin: 0 0 20px 0;
+	}
+}
+
+footer{
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: #607d8b;
+	color: #fff;
+	padding: 20px 0;
+}
+footer ul{
+	display: flex;	
+}
+footer ul li{
+	margin-left: 16px;
+}
+footer p{
+	text-transform: uppercase;
+	font-size: 14x;
+	opacity: 0.6;
+	align-self: center;
+}
+@media (max-width: 1100px){
+	footer{
+		flex-direction: column;
+	}
+	footer p{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	footer ul li{
+		margin:0 8px;
+	}
+}
+</style>
+
+
+
+
+
+	<header class="header-top-menu">
+		<h2><a href="#">Home</a></h2>
+		<nav>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Custom</a></li>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div style="background-color: white"</div>
+		<div class="hero-content-area">
+			<h1><i class="fa fa-snowflake-o" style="font-size:48px;color:#abd8de"> </i> <font color="abd8de"> Snowball Jewelry Co. </font> <i class="fa fa-snowflake-o" style="font-size:48px;color:#abd8de"></i></h1>
+			<h3><font color="#899698">The Coldest Custom Jewelry</font></h3>
+			<a href="#box1" class="btn">Check Us Out</a>
+		</div>
+	</section>
+	<section class="destination" id="box1">
+		<h3 class="title">
+			About Us
+		</h3>
+		<hr>
+		<p>At Snowball Jewelry Co. we can create any piece you put your mind to. We work with you to turn your ideas into a hard hitting custom piece of jewelry. We work with all types of metals (stainless steel, sterling silver, 10k/14k/18k yellow/rose/white gold) and all types of stones (cz, lab diamonds, si, vs, and vvs).</p>
+		<!--<hr> -->
+	</section>
+	<section class="destination" id="box2">
+		<h3 class="title">
+			Why We're Different
+		</h3>
+		<hr>
+		<p>We work directly with manufacturers to get you the lowest price. We handle the creation of the mockups, the molding, and the diamond setting. By having direct connection to our manufacturers, our custom piece quotes are typically 40-50% less than other custom jewelers. We keep costs low and production times short to deliver you the best fully custom piece.</p>
+	</section>
+	<section class="destination" id="box3">
+		<h3 class="title">
+			Gallery
+		</h3>
+		<hr>
+		<p>Below are some custom pieces delivered to clients:</p>
+		<ul class="grid">
+			<li class="half" style="background-image: url(Videos/plank.MOV)"></li>
+			<li class="half" style="background-image: url(Videos/bracelet.MOV)"></li>
+			<li class="half" style="background-image: url(Videos/cactus.MOV)"></li>
+			<li class="half" style="background-image: url(Videos/a.MOV)"></li>
+			<!--<li class="small" style="background-image: url(http://images.all-free-download.com/images/graphicthumb/natural_fantasia_hd_picture_4_166069.jpg)"></li>
+			<li class="large" style="background-image: url(http://www.hdnicewallpapers.com/Walls/Big/Mountain/Grand_Canyon_Mountain_in_Arizona_State_of_USA_HD_Tourist_Place_Wallpapers.jpg)"></li>
+			<li class="large" style="background-image: url(https://i.pinimg.com/originals/b9/26/00/b926005767749f7531267f291ffd0858.jpg)"></li>
+			<li class="small" style="background-image: url(http://allpicts.in/wp-content/uploads/2016/07/Nature-Images-HD-with-Snowy-Mountain-500x281.jpg)"></li> -->
+		</ul>
+		
+	</section>
+	<section class="package">
+		<h3 class="title">The Process</h3>
+		
+		<hr>
+		<ul class="grid">
+			<li>
+				<i class="fa fa-paint-brush fa-4x"></i>
+				<h4>Idea & Design</h4>
+				<p>Come up with an idea and draw it on paper or send us a link to an image. Let us know what kind of metal and diamonds you want. We work with sterling silver, real gold (10k - 18k), cz, lab diamonds, and real diamonds (si - VVS).</p>
+			</li>
+			<li>
+				<i class="fa fa-money fa-4x"></i> 
+				<h4>Price Quote & Payment</h4>
+				<p>We send you a price quote for your custom piece. You can commission the order safely thorugh PayPal.</p>
+			</li>
+			<li>
+				<i class="fa fa-cog fa-4x"></i>
+				<h4>Production</h4>
+				<p>We push the order to production and keep you updated with pictures and videos. Your custom piece is in the works!</p>
+			</li>
+			<li>
+				<i class="fa fa-truck fa-4x"></i>
+				<h4>Shipping</h4>
+				<p>We inspect the piece after production is done and ship you the piece with its tracking number. You should recieve your custom piece soon!</p>
+			</li>
+		</ul>
+	</section>
+  <section class="package">
+    <h3 class="title">
+      An Actual Customer Journey
+    </h3>
+    <hr>
+    <ul class="grid">
+			<li>
+				<i class="fa fa-paint-brush fa-4x"></i>
+				<h4>Idea & Design</h4>
+				<p>A customer reached out to us with the following drawing:</p>
+				<p>They wanted a custom 2.25" old english two-tone stacked letter "A" that was 925 silver and dipped in white and rose gold with cz stones. 
+				
+			</li>
+			<li>
+				<i class="fa fa-money fa-4x"></i> 
+				<h4>Price Quote & Payment</h4>
+				<p>The customer recieved a price quote of this piece for $500 and paid through PayPal.</p>
+			</li>
+			<li>
+				<i class="fa fa-cog fa-4x"></i>
+				<h4>Production</h4>
+				<p>The production team created the following rendering and we send it to the customer:</p>
+				<p>As the piece is created step by step we send pictures and videos:</p>
+				<p>We quality control the final piece and send an image of the finished product:</p>
+			</li>
+			<li>
+				<i class="fa fa-truck fa-4x"></i>
+				<h4>Shipping</h4>
+				<p>The customer chose regular shipping and recieved the tracking number for their piece. In less than 25 days the customer recieved a custom hand made pendant.</p>
+			</li>
+		</ul>
+    
+  </section>
+  <section class="contact">
+    <h3 class="title">Start Your Order</h3>
+    <p>To start your order please email snowballsales@gmail.com.</p>
+    <hr>
+    <form>
+    	<input type="email" placeholder="email">
+    	<a href="#" class="btn">Subscibe now</a>
+    </form>
+  </section>
+  <!--<footer>
+  	<p>Some credits</p>
+  	<p>Just a simple footer, no need to pay attention!</p>
+  	<ul>
+  		<li><a href="#"><i class="fa fa-instagarm-square fa-2x"></i></a></li>
+  		<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+  		<li><a href="#"><i class="fa fa-github-square fa-2x"></i></a></li>
+  	</ul>
+  </footer> -->
+</body>
+</html>
